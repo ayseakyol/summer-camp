@@ -1,0 +1,43 @@
+{
+  "nextId": 48,
+  "participants": [
+    {
+      "id": 2,
+      "firstName": "Marcus",
+      "lastName": "Aurelius",
+      "email": "marcus.aurelius@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Peter",
+      "lastName": "Popins",
+      "age": 34,
+      "email": "peter.popins.1856@yahoo.com"
+    },
+    {
+      "id": 8,
+      "firstName": "Lynn",
+      "lastName": "Frank",
+      "age": 25
+    },
+    {
+      "id": 28,
+      "firstName": "Sonia",
+      "lastName": "Miotch",
+      "age": 53,
+      "email": "miotch.sonia@gmail.com"
+    },
+    {
+      "firstName": "Lynn",
+      "lastName": "Frank",
+      "age": 23,
+      "id": 32
+    },
+    {
+      "firstName": "Ayse",
+      "lastName": "Akyol",
+      "age": 45,
+      "id": 33
+    }
+  ]
+}

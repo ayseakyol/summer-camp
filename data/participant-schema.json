@@ -1,0 +1,34 @@
+{
+  "title": "User Participant Input",
+  "description": "Definition of input to create participant",
+  "type": "object",
+  "properties": {
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "first-name": {
+            "type": "string"
+          },
+          "last-name": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 30
+          },
+          "age": {
+            "type": "number"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          }
+        }
+      },
+      "required": ["id", "first-name", "last-name"]
+    }
+  }
+}

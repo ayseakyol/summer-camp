@@ -1,0 +1,22 @@
+{
+  "name": "summer-camp",
+  "version": "1.0.0",
+  "description": "node full stack ## Back-End 1-get all participants 2-get a special participant 3- post 4- put 5- delete",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayseakyol/summer-camp.git"
+  },
+  "keywords": [
+    "summer-camp"
+  ],
+  "author": "ayse akyol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayseakyol/summer-camp/issues"
+  },
+  "homepage": "https://github.com/ayseakyol/summer-camp#readme"
+}

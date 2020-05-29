@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/ab20063917.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>summer-camp</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script type="module">
+      import { init } from "./app/init.js";
+      window.onload = init;
+    </script>
+  </head>
+  <body>
+    <header class="jumbotron text-center">
+      <h1 class="display-4 text-center">
+        <i class="far fa-sun text-primary"></i>
+        Summer
+        <span class="text-primary">Camp</span> Form
+      </h1>
+    </header>
+    <!-- this is the main div -->
+    <div class="container bg-light">
+      <!-- first form for post-->
+      <div class="col-12">
+        <form
+          action="/api/participants"
+          method="POST"
+          id="save-form"
+          class="mt-4"
+        >
+          <div class="form-group row">
+            <!-- <label for="id">ID</label>
+            <input id="id" type="number" class="form-control" /> -->
+            <label for="firstName">First Name</label>
+            <input name="firstName" type="text" class="form-control" />
+            <label for="lastName">Last Name</label>
+            <input name="lastName" type="text" class="form-control" />
+            <label for="email">Email</label>
+            <input name="email" type="text" class="form-control" />
+            <label for="age">Age</label>
+            <input name="age" type="number" class="form-control" />
+            <button id="save-button" type="submit" class="btn btn-primary">
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- this is the modal form to use delete application  -->
+      <div class="col-12 mt-3">
+        <div id="deleteModal" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Delete Your Application Form </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <form action="/api/participants/delete" method="POST">
+                  <div class="form-group row">
+                    <label for="id" class="col-sm-2 col-form-label">Your Application ID</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" name="id">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm ml-1 bg-danger">Delete</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- <button id="save-button" class="btn btn-primary">
+        save participant
+      </button>
+      <button id="change-button" class="btn btn-primary">
+        change participant
+      </button>
+      <button id="delete-button" class="btn btn-primary">
+        delete participant
+      </button> -->
+
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr id="output">
+            <th id="id">ID</th>
+            <th id="first-name">First Name</th>
+            <th id="last-name">Last Name</th>
+            <th id="email">Email</th>
+            <th id="age">Age</th>
+          </tr>
+        </thead>
+        <tbody id="course-list"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
