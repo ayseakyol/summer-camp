@@ -35,7 +35,7 @@ const handlers = {
         });
         return;
       }
-      console.log(11, newParticipant);
+      console.log(3, newParticipant);
       participantsData.participants.push(newParticipant);
 
       const newParticipantDataString = JSON.stringify(
@@ -60,7 +60,7 @@ const handlers = {
       const participantsDataString = await readFile(DATA_PATH, "utf-8");
       const participantsData = JSON.parse(participantsDataString);
 
-      res.json(participantsData.participants);
+      res.send(participantsData.participants);
     } catch (err) {
       console.log(err);
 
@@ -72,7 +72,7 @@ const handlers = {
     }
   },
   readOne: async (req, res) => {
-    const idToUpdate = Number(req.params.id);
+    const idToUpdate = Number(req.body.id);
     try {
       const participantsDataString = await readFile(DATA_PATH, "utf-8");
       const participantsData = JSON.parse(participantsDataString);
@@ -92,7 +92,7 @@ const handlers = {
     }
   },
   update: async (req, res) => {
-    const idToUpdate = Number(req.params.id);
+    const idToUpdate = Number(req.body.id);
 
     const newParticipant = req.body;
     newParticipant.id = idToUpdate;
@@ -147,19 +147,19 @@ const handlers = {
     }
   },
   delete: async (req, res) => {
-    const idToDelete = Number(req.params.id);
+    const idToDelete = Number(req.body.id);
 
     try {
       const participantsDataString = await readFile(DATA_PATH, "utf-8");
       const participantsData = JSON.parse(participantsDataString);
 
-      const enrtyToDelete = participantsData.participants.find(
+      const entryToDelete = participantsData.participants.find(
         (participant) => participant.id === idToDelete
       );
 
-      if (enrtyToDelete) {
+      if (entryToDelete) {
         participantsData.participants = participantsData.participants.filter(
-          (participant) => participant.id !== enrtyToDelete.id
+          (participant) => participant.id !== entryToDelete.id
         );
 
         const newParticipantDataString = JSON.stringify(
@@ -170,14 +170,14 @@ const handlers = {
 
         await writeFile(DATA_PATH, newParticipantDataString);
 
-        res.json(enrtyToDelete);
+        res.json(entryToDelete);
       } else {
         res.json(`no entry with id ${idToDelete}`);
       }
     } catch (err) {
       console.log(err);
       if (err && err.code === "ENOENT") {
-        res.satatus(404).end();
+        res.status(404).end();
         return;
       }
       next(err);
