@@ -3,10 +3,10 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/", handlers.readAll);
-router.post("/view", handlers.readOne);
-router.post("/", handlers.post);
-router.post("/change", handlers.update);
-router.post("/delete", handlers.delete);
+router.get("/participants", handlers.readAll);
+router.post("/participants/view", handlers.readOne);
+router.post("/participants", handlers.post);
+router.post("/participants/change", handlers.update);
+router.post("/participants/delete", handlers.delete);
 
 module.exports = router;
