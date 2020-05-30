@@ -19,7 +19,7 @@ Studying this project I learned about:
 - tv4 validation
 - making full stack project
 
-These resources were very helpful:
+This resource was very helpful:
 
 JSON Schema: https://www.youtube.com/watch?v=tp4IzG6oDA0
 
