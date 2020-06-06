@@ -16,9 +16,9 @@ export const init = async () => {
     li.textContent = `${participantsId} ${participantsName} ${participantsLastName}`;
     ul.appendChild(li);
   }
-  const Allbutton = document.createElement("label");
-  Allbutton.textContent = "All Participants";
+  const button = document.createElement("label");
+  button.textContent = "All Participants";
   const div = document.getElementById("output");
-  div.appendChild(Allbutton);
+  div.appendChild(button);
   div.appendChild(ul);
 };

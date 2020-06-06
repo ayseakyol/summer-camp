@@ -3,6 +3,9 @@
   "description": "Definition of input to create participant",
   "type": "object",
   "properties": {
+    "nextId": {
+      "type": "number"
+    },
     "participants": {
       "type": "array",
       "items": {

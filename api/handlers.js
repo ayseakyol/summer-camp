@@ -45,7 +45,8 @@ const handlers = {
       );
 
       await writeFile(DATA_PATH, newParticipantDataString);
-      res.json(newParticipant);
+      //res.json(newParticipant);
+      res.redirect("/");
     } catch (err) {
       console.log(err);
       if (err && err.code === "ENOENT") {
@@ -133,7 +134,8 @@ const handlers = {
 
         await writeFile(DATA_PATH, newParticipantDataString);
 
-        res.json(newParticipant);
+        //res.json(newParticipant);
+        res.redirect("/");
       } else {
         res.json(`no entry with id ${idToUpdate}`);
       }
@@ -170,7 +172,8 @@ const handlers = {
 
         await writeFile(DATA_PATH, newParticipantDataString);
 
-        res.json(entryToDelete);
+        //res.json(entryToDelete);
+        res.redirect("/");
       } else {
         res.json(`no entry with id ${idToDelete}`);
       }
