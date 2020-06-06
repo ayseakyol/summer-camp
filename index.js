@@ -28,9 +28,11 @@ app.use(
 // log to console
 app.use(morgan("dev"));
 
+app.use("/", express.static(path.join(__dirname, "client")));
+
 app.use("/api", api);
 
-app.use("/", express.static(path.join(__dirname, "client")));
+
 
 app.use(function (err, req, res, next) {
   console.error(err.stack);
