@@ -1,4 +1,4 @@
-# Book List: Development Strategy
+# Summer Camp: Development Strategy
 
 Building this site one step at a time
 
