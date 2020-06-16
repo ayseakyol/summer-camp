@@ -3,6 +3,7 @@
 node full stack
 
 A static web page for rhythmic expression built with HTML, CSS, JavaScript & Node.
+Try the live demo [right here](https://summer-camp-form.herokuapp.com/)
 
 It looks something like this:
 
