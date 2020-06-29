@@ -2,10 +2,11 @@
 
 node full stack
 
-A static web page for rhythmic expression built with HTML, CSS, JavaScript & Node.
-Try the live demo [right here](https://summer-camp-form.herokuapp.com/)
+- A static web page for rhythmic expression built with HTML, CSS, JavaScript & Node.
 
-It looks something like this:
+- Try the live demo [right here](https://summer-camp-form.herokuapp.com/)
+
+- It looks something like this:
 
 [![summer camp screen shot](./summer.png)](https://github.com/ayseakyol/summer-camp)
 [![summer app screen shot](./summer2.png)](https://github.com/ayseakyol/summer-camp)
